@@ -3,10 +3,15 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  background: #023852;
 }
 
 .navbar {
-  background: #0099de;
+  background: #ffffff;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -47,14 +52,15 @@
 }
 
 .navbar__links {
-  color: #ffffff;
+  color: #0099de;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100px;
+  width: 150px;
   text-decoration: none;
   height: 100%;
   transition: all 0.3s ease;
+  font-weight: 600;
 }
 
 .navbar__btn {
@@ -63,6 +69,7 @@
   align-items: center;
   padding: 0 1rm;
   width: 100%;
+  margin-left: 130px;
 }
 
 .button {
@@ -73,20 +80,25 @@
   padding: 10px 20px;
   height: 100%;
   width: 100%;
-  border: none;
+  border: 2px solid #0099de;
   outline: none;
-  border-radius: 4px;
-  background: #00c3ff; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #ffff1c, #00c3ff); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #ffff1c, #00c3ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: white;
+  border-radius: 50px;
+  background: transparent;
+  color: #0099de;
   transition: all 0.3s ease;
+  font-weight: 600;
 }
 
 .navbar__links:hover {
   text-decoration: underline;
-  text-decoration-color: #ffffff;
+  text-decoration-color: #0099de;
   transition: all 0.3s ease;
+}
+
+.button:hover {
+  transition: all 0.3s ease;
+  background: #0099de;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 960px) {
@@ -113,13 +125,13 @@
   }
 
   .navbar__menu.active {
-    background: #131313;
+    background: #ffffff;
     top: 100%;
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 99;
     height: 60vh;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   #navbar__logo {
@@ -131,7 +143,7 @@
     height: 3px;
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
-    background: #ffffff;
+    background: #0099de;
   }
 
   .navbar__item {
@@ -147,13 +159,14 @@
 
   .navbar__btn {
     padding-bottom: 2rem;
+    margin: 20px 0 0 0;
   }
 
   .button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 40%;
     height: 80px;
     margin: 0;
   }
@@ -168,5 +181,17 @@
   .navbar__toggle .bar {
     display: block;
     cursor: pointer;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  #mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
 }
