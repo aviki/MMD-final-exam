@@ -40,7 +40,7 @@
   text-decoration: none;
   padding: 15px 40px;
   height: 100%;
-  width: 100%;
+  width: 10 0%;
   outline: none;
   border-radius: 30px;
   background: var(--milestone-blue);
@@ -257,7 +257,7 @@
 
 .hero {
   background-image: url(assets/hero-img.jpg);
-  padding: 200px;
+  padding: 30px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -295,7 +295,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   transition: all 0.3s ease;
 }
 
@@ -340,7 +339,6 @@
   z-index: 1;
   width: 100%;
   max-width: 1300px;
-  padding: 0 50px;
 }
 
 .main__content {
@@ -361,4 +359,17 @@
   margin-top: 1rem;
   font-size: 1.2rem;
   font-weight: 300;
+}
+
+.main__img--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px;
+}
+
+img {
+  max-width: 100%;
 }
