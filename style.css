@@ -326,7 +326,7 @@
 
 .main {
   background-color: var(--light-gray);
-  padding: 10rem 0;
+  padding: 3rem 0;
 }
 
 .main__container {
@@ -372,4 +372,36 @@
 
 img {
   max-width: 100%;
+}
+
+/* Mobile Responsive */
+
+@media screen and (max-width: 1100px) {
+  .main__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 90%;
+  }
+
+  .main__img--container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .main__content {
+    text-align: center;
+    padding: 0 1.5rem;
+  }
+
+  .main__content h3 {
+    margin-top: 3rem;
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
 }
