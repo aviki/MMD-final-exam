@@ -118,7 +118,7 @@
   text-decoration: none;
   height: 100%;
   transition: all 0.3s ease;
-  font-weight: 600;
+  font-weight: 900;
 }
 
 .navbar__btn {
@@ -147,8 +147,7 @@
 }
 
 .navbar__links:hover {
-  text-decoration: underline;
-  text-decoration-color: #0099de;
+  color: #0099de;
   transition: all 0.3s ease;
 }
 
@@ -335,6 +334,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  padding-top: 7rem;
   height: 90%;
   z-index: 1;
   width: 100%;
@@ -372,6 +372,7 @@
 
 img {
   max-width: 100%;
+  margin-bottom: 2rem;
 }
 
 /* Mobile Responsive */
