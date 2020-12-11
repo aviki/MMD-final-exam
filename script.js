@@ -1,6 +1,10 @@
+// window.addEventListener("DOMContentLoaded", init);
+
+// import Typewriter from "typewriter-effect/dist/core";
+
 const menu = document.querySelector("#mobile-menu");
 const menuLinks = document.querySelector(".navbar__menu");
-const navLogo = document.querySelector("#navbar-logo");
+const navLogo = document.querySelector("#navbar__logo");
 
 // Display Mobile Menu
 
@@ -69,3 +73,13 @@ const hideMobileMenu = () => {
 
 menuLinks.addEventListener("click", hideMobileMenu);
 navLogo.addEventListener("click", hideMobileMenu);
+
+// Typing animation script
+
+var typed = new Typewriter(".typing", {
+  strings: ["PREVENT", "PROTECT", "PROVE"],
+  typeSpeed: 100,
+  backSpeed: 600,
+  autoStart: true,
+  loop: true,
+});
