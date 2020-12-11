@@ -21,6 +21,7 @@ const highLightMenu = () => {
   const communityMenu = document.querySelector("#community-page");
   const downloadMenu = document.querySelector("#download-page");
   let scrollPos = window.scrollY;
+  console.log(scrollPos);
 
   // adds "highlight class to my menu items"
   if (window.innerWidth > 960 && scrollPos < 600) {
@@ -55,3 +56,16 @@ const highLightMenu = () => {
 
 window.addEventListener("scroll", highLightMenu);
 window.addEventListener("click", highLightMenu);
+
+// Close mobile Menu when clicking on a menu item
+
+const hideMobileMenu = () => {
+  const menuBars = document.querySelector(".is-active");
+  if (window.innerWidth <= 768 && menuBars) {
+    menu.classList.toggle("is-active");
+    menuLinks.classList.remove("active");
+  }
+};
+
+menuLinks.addEventListener("click", hideMobileMenu);
+navLogo.addEventListener("click", hideMobileMenu);
