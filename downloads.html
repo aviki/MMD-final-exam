@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MIP SDK</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  </head>
+
+  <body>
+    <!-- Navbar Section -->
+
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="index.html"><img id="navbar__logo" src="assets/blue-logo.png" alt="" class="logo" /></a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="#home" class="navbar__links" id="home-page">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#about" class="navbar__links" id="about-page">About</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#learn" class="navbar__links" id="learn-page">Learn</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#community" class="navbar__links" id="community-page">Community</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#downloads" class="navbar__links" id="download-page">Downloads</a>
+          </li>
+          <li class="navbar__btn">
+            <a href="#sign-up" class="button" class="modal-btn" id="signup">SIGN UP</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Modal for "Sign up" button -->
+
+    <div class="modal-bg">
+      <div class="modal">
+        <h2>Developer Update</h2>
+        <form class="success" class="error">
+          <div class="input-container">
+            <input type="text" name="first-name" class="input" />
+            <label for="name" name="first-name">First name </label>
+            <span>First name</span>
+            <i class="fa fa-check-circle"></i>
+            <i class="fa fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+          <div class="input-container">
+            <input type="text" name="last-name" class="input" />
+            <label for="name">Last name </label>
+            <span>Last name</span>
+
+            <i class="fa fa-check-circle"></i>
+            <i class="fa fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+          <div class="input-container">
+            <input type="email" name="email" class="input" />
+            <label for="email">Email </label>
+            <span>Email</span>
+
+            <i class="fa fa-check-circle"></i>
+            <i class="fa fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+        </form>
+
+        <button>SUBSCRIBE</button>
+        <span class="modal-close">X</span>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+
+    <div class="hero" id="downloads">
+      <div class="hero__container">
+        <h1 class="hero__heading">MIP SDK .NET binaries on NuGet</h1>
+        <div class="hero__description">
+          On October 5th, we released the XProtect 2020 R2 MIP SDK .NET Framework .dll binaries as NuGet packages. You can add the needed Milestone XProtect NuGet packages to your Visual Studio projects and let Visual Studio handle the download.
+        </div>
+        <div class="btn__container">
+          <span class="btn__item"><a href="https://www.milestonesys.com/content-hub/developer-update/2020/december/sdk-on-nuget/" class="white-btn">GET STARTED</a></span>
+          <span class="btn__item"><a href="https://www.nuget.org/profiles/milestonesys" class="border-btn">DOWNLOADS</a></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Downloads Page -->
+    <div class="main" id="about">
+      <div class="main__container">
+        <div class="main__img--container">
+          <img src="assets/download.png" alt="" />
+          <span><a class="blue-btn modal-btn" id="download">Download MIP SDK</a></span>
+        </div>
+        <div class="main__content">
+          <h3>ABOUT</h3>
+          <h1>Create applications & device drivers for XProtect</h1>
+          <p>
+            By submitting the form below you will get access to the latest version of the MIP SDK package. If you don't want to bother with downloading every new release manually, then you can find the XProtect MIP packages on NuGet <span class="links"><a href="https://www.milestonesys.com/content-hub/developer-update/2020/december/sdk-on-nuget/">here.</a></span>  
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="main" id="learn">
+      <div class="main__container">
+        <div class="main__content">
+          <h3>DOWNLOADS</h3>
+          <h1>Download XProtect® Essential+</h1>
+          <p>XProtect Essential+ supports the Milestone Integration Platform (MIP), meaning you can directly integrate and embed third-party applications, hardware and services developed by our community of technology partners. Download XProtect Essential+ and get started. The free license supports up to 8 devices, an unlimited number of users and unlimited video retention time.</p>
+        </div>
+        <div class="main__img--container">
+          <img src="assets/globe.png" alt="" />
+          <span><a href="#" class="blue-btn">Download XProtect®</a></span>
+        </div>
+      </div>
+
+    <div class="main" id="community">
+      <div class="main__container">
+        <div class="main__img--container">
+          <img src="assets/community.png" alt="" />
+          <span><a href="#" class="blue-btn">JOIN DEVELOPER FORUM</a></span>
+        </div>
+        <div class="main__content">
+          <h3>COMMUNITY</h3>
+          <h1>Need help with MIP SDK?</h1>
+          <p>
+            Milestone Developer Forum makes it easier for you as developers in the open platform community to pose questions for and share inspiration with your peers. Use the link to find answers on MIP SDK development issues or post questions
+            yourself.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MIP SDK sign up & download modal + form -->
+
+    <div class="modal-background">
+        <div class="modal">
+        <h2>Get access to MIP SDK</h2>
+        <h4>By submitting this form you accept to be contacted by Milestone. You may at any time withdraw your consent here.</h4>
+        <form class="success" class="error">
+            <div class="input-container">
+                <input type="text" name="first-name" class="input" />
+                <label for="name" name="first-name">First name </label>
+                <span>First name</span>
+
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="input-container">
+                <input type="text" name="last-name" class="input" />
+                <label for="name">Last name </label>
+                <span>Last name</span>
+
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="input-container">
+                <input type="email" name="email" class="input" />
+                <label for="email">Email </label>
+                <span>Email</span>
+
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+            <div class="input-container">
+                <input type="text" name="company" class="input" />
+                <label for="company" name="company">Company </label>
+                <span>Company</span>
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+            <div class="input-container">
+                <input type="text" name="job-title" class="input" />
+                <label for="job-title" name="first-name">Job title </label>
+                <span>Job title</span>
+
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+        </form>
+
+        <button>SUBSCRIBE</button>
+        <span class="modal-x">X</span>
+        </div>
+    </div>
+
+    <script type="module" src="download-page.js"></script>
+  </body>
+</html>
+

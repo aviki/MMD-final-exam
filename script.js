@@ -1,7 +1,5 @@
 // window.addEventListener("DOMContentLoaded", init);
 
-// import Typewriter from "typewriter-effect/dist/core";
-
 const menu = document.querySelector("#mobile-menu");
 const menuLinks = document.querySelector(".navbar__menu");
 const navLogo = document.querySelector("#navbar__logo");
@@ -77,14 +75,14 @@ navLogo.addEventListener("click", hideMobileMenu);
 // Typing animation script
 
 var typed = new Typewriter(".typing", {
-  strings: ["PREVENT", "PROTECT", "PROVE"],
+  strings: ["PREVENT.", "PROTECT.", "PROVE."],
   typeSpeed: 100,
   backSpeed: 600,
   autoStart: true,
   loop: true,
 });
 
-// Sign up modal script
+// Sign up for Developer Update modal script
 
 var modalBtn = document.querySelector("#signup");
 var modalBg = document.querySelector(".modal-bg");
@@ -117,4 +115,18 @@ function blurFunction() {
 inputs.forEach((input) => {
   input.addEventListener("focus", focusFunction);
   input.addEventListener("blur", blurFunction);
+});
+
+//Sign up and Download the MIP SDK
+
+var downloadBtn = document.querySelector("#download");
+var modalBackground = document.querySelector(".modal-background");
+var modalX = document.querySelector(".modal-x");
+
+downloadBtn.addEventListener("click", function () {
+  modalBackground.classList.add("background-active");
+});
+
+modalX.addEventListener("click", function () {
+  modalBackground.classList.remove("background-active");
 });
