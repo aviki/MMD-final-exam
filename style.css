@@ -277,26 +277,26 @@
 .modal {
   position: relative;
   background-color: white;
-  width: 40%;
-  height: 50%;
+  width: 30%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  border-radius: 20px;
-  padding: 2rem;
+  margin-top: 15vh;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.8);
 }
 
 .modal button {
-  display: block;
-  width: 100%;
-  margin: 40px 0;
-  padding: 10px 30px;
-  background-color: var(--developer-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 50px;
+  background-color: var(--milestone-blue);
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-weight: 600;
 }
 
 .modal h2 {
@@ -338,7 +338,7 @@
   font-size: 0.9rem;
   font-weight: 400;
   pointer-events: none;
-  z-index: 1000;
+  z-index: 800;
   transition: 0.5s;
 }
 
@@ -582,9 +582,6 @@ img {
   }
 }
 
-@media screen and (max-width: 480px) {
-}
-
 /*----------------- Downloads Page ---------------------------------*/
 
 #downloads {
@@ -623,43 +620,35 @@ img {
   opacity: 1;
 }
 
-.modal {
-  position: relative;
-  background-color: white;
-  width: 40%;
-  height: 50%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  border-radius: 20px;
-  padding: 2rem;
-}
-
-.modal button {
-  display: block;
-  width: 100%;
-  margin: 40px 0;
-  padding: 10px 30px;
-  background-color: var(--developer-blue);
+.modal-info {
+  background: var(--milestone-blue);
+  padding: 1.5rem 1rem;
   color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.modal h2 {
-  text-align: center;
-  color: var(--developer-blue);
-  font-weight: 600;
-  margin-bottom: 2rem;
+.modal-info p {
+  margin-top: 1rem;
+  padding-left: 1rem;
+  font-size: 13px;
 }
 
 .modal-x {
   position: absolute;
   top: 20px;
   right: 20px;
-  color: var(--dark-gray);
+  color: white;
   font-weight: 900;
   cursor: pointer;
+}
+
+.form-container {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
