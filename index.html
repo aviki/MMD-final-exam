@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   </head>
 
   <body>
@@ -48,12 +49,35 @@
     <div class="modal-bg">
       <div class="modal">
         <h2>Developer Update</h2>
-        <label for="name">First name: </label>
-        <input type="text" name="first-name" />
-        <label for="name" name="last-name">Last name: </label>
-        <input type="text" />
-        <label for="email">Email: </label>
-        <input type="email" name="email" id="" />
+        <form class="success" class="error">
+          <div class="input-container">
+            <input type="text" name="first-name" class="input" />
+            <label for="name" name="first-name">First name </label>
+            <span>First name</span>
+            <i class="fa fa-check-circle"></i>
+            <i class="fa fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+          <div class="input-container">
+            <input type="text" name="last-name" class="input" />
+            <label for="name">Last name </label>
+            <span>Last name</span>
+
+            <i class="fa fa-check-circle"></i>
+            <i class="fa fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+          <div class="input-container">
+            <input type="email" name="email" class="input" />
+            <label for="email">Email </label>
+            <span>Email</span>
+
+            <i class="fa fa-check-circle"></i>
+            <i class="fa fa-exclamation-circle"></i>
+            <small>Error message</small>
+          </div>
+        </form>
+
         <button>SUBSCRIBE</button>
         <span class="modal-close">X</span>
       </div>
