@@ -118,3 +118,82 @@ downloadBtn.addEventListener("click", function () {
 modalX.addEventListener("click", function () {
   modalBackground.classList.remove("background-active");
 });
+
+// Form validation
+
+const downloadForm = document.getElementById("download-form");
+const firstName = document.getElementById("first-name");
+const lastName = document.getElementById("last-name");
+const email = document.getElementById("email");
+const company = document.getElementById("company");
+const jobTitle = document.getElementById("job-title");
+
+downloadForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  checkInputs();
+});
+
+function checkInputs() {
+  //get values from the inputs
+  const firstNameValue = firstName.value.trim(); //trim removes all the white space from the input
+  const lastNameValue = lastName.value.trim();
+  const emailValue = email.value.trim();
+  const companyValue = company.value.trim();
+  const jobTitleValue = jobTitle.value.trim();
+
+  if (firstNameValue === "") {
+    //show error
+    //add error class
+    setErrorFor(firstName, "First name is required");
+  } else {
+    //add success class
+    setSuccessFor(firstName);
+  }
+
+  if (lastNameValue === "") {
+    setErrorFor(lastName, "Last name is required");
+  } else {
+    setSuccessFor(lastName);
+  }
+
+  if (emailValue === "") {
+    setErrorFor(email, "Email is required");
+    //   } else if (!validateEmail(emailValue)) {
+    //     setErrorFor(email, "Email is not valid");
+    //   } else {
+  } else {
+    setSuccessFor(email);
+  }
+
+  if (companyValue === "") {
+    setErrorFor(company, "Company is required");
+  } else {
+    setSuccessFor(company);
+  }
+}
+
+function setErrorFor(input, message) {
+  const inputContainer = input.parentElement; //input-container div
+  const small = inputContainer.querySelector("small");
+
+  //add error message inside small
+  small.innerText = message;
+
+  //add error class
+  inputContainer.className = "input-container error";
+}
+
+function setSuccessFor(input) {
+  const inputContainer = input.parentElement;
+  //add success class
+  inputContainer.className = "input-container success";
+}
+
+// function validateEmail(email) {
+//   if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(myForm.emailAddr.value)) {
+//     return true;
+//   }
+//   alert("You have entered an invalid email address!");
+//   return false;
+// }
