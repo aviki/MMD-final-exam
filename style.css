@@ -278,6 +278,8 @@
   position: relative;
   background-color: white;
   width: 30%;
+  overflow-y: scroll;
+  max-height: 100vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -651,4 +653,88 @@ img {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.modal-btn {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+  .modal {
+    width: 90%;
+    height: 90vh;
+    overflow-y: scroll;
+  }
+}
+
+/*----------------------- Footer ----------------- */
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  background-color: var(--developer-blue);
+  color: white;
+  font-size: 14px;
+  padding: 3rem;
+}
+
+.some,
+.additional-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.connect {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+
+.connect p {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.some,
+.additional-info li {
+  list-style-type: none;
+  color: white;
+}
+
+.some li i {
+  margin: 0 1.8rem;
+  font-size: 22px;
+}
+
+.some,
+.additional-info li a {
+  text-decoration: none;
+  color: white;
+}
+
+.some,
+.additional-info li a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1000px) {
+  .footer {
+    flex-direction: column;
+    height: 20vh;
+    padding: 1.5rem;
+  }
+
+  .additional-info {
+    margin-top: 20px;
+  }
+
+  .milestone-copyrights {
+    order: 3;
+    margin-top: 10px;
+  }
 }
