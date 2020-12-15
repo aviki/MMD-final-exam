@@ -18,15 +18,12 @@
 /* Button Styles */
 
 .white-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-decoration: none;
   padding: 15px 40px;
   height: 100%;
   width: 100%;
   outline: none;
-  border-radius: 50px;
+  border-radius: 30px;
   background: white;
   color: var(--developer-blue);
   transition: all 0.3s ease;
@@ -34,13 +31,10 @@
 }
 
 .blue-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-decoration: none;
   padding: 15px 40px;
   height: 100%;
-  width: 10 0%;
+  width: 100%;
   outline: none;
   border-radius: 30px;
   background: var(--milestone-blue);
@@ -50,16 +44,11 @@
 }
 
 .border-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-decoration: none;
   padding: 15px 40px;
-  height: 100%;
-  width: 100%;
   border: 2px solid white;
   outline: none;
-  border-radius: 50px;
+  border-radius: 30px;
   background: transparent;
   color: white;
   transition: all 0.3s ease;
@@ -131,9 +120,6 @@
 }
 
 .button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-decoration: none;
   padding: 10px 20px;
   height: 100%;
@@ -496,11 +482,12 @@
   }
 
   .btn__container {
-    display: table-column;
+    display: flex;
+    flex-direction: column;
   }
 
   .btn__item {
-    padding: 2rem 2rem 0;
+    padding: 2rem;
     width: 100%;
   }
 }
@@ -554,10 +541,14 @@
   margin: 10px;
 }
 
-img {
+.main__img--container img {
+  max-width: 70%;
+}
+
+/* img {
   max-width: 100%;
   margin-bottom: 2rem;
-}
+} */
 
 /* Mobile Responsive */
 
@@ -575,6 +566,11 @@ img {
   .main__img--container {
     display: flex;
     justify-content: center;
+  }
+
+  .main__img--container img {
+    max-width: 50%;
+    margin-bottom: 2rem;
   }
 
   .main__content {
@@ -741,4 +737,18 @@ img {
     order: 3;
     margin-top: 10px;
   }
+}
+
+/*----------------- Thank you Page ---------------------------------*/
+
+#thank-you {
+  background-image: url(assets/developer-banner.png);
+  padding: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.white-section {
+  background-color: white;
 }

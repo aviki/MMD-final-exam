@@ -105,7 +105,7 @@ inputs.forEach((input) => {
   input.addEventListener("blur", blurFunction);
 });
 
-//Sign up and Download the MIP SDK
+//Sign up and Download the MIP SDK modal
 
 var downloadBtn = document.querySelector("#download");
 var submitBtn = document.getElementById("submit");
@@ -246,6 +246,22 @@ function setSuccessFor(input) {
   inputContainer.className = "input-container success";
 }
 
+//Check if email valid with regex from stackoverflow(https://stackoverflow.com/questions/201323/how-to-validate-an-email-address-using-a-regular-expression)
 function isEmail(email) {
   return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
+
+// Thank you for downloading the SDK pop-up modal
+
+var sdkModalBtn = document.querySelector("#sdk-button");
+var mobileSdkModalBtn = document.querySelector("#mobile-sdk-button");
+var thanksModalBg = document.querySelector(".thanks-modal-bg");
+var thanksModalClose = document.querySelector(".thanks-modal-close");
+
+sdkModalBtn.addEventListener("click", function () {
+  thanksModalBg.classList.add("bg-active");
+});
+
+thanksModalClose.addEventListener("click", function () {
+  thanksModalBg.classList.remove("bg-active");
+});

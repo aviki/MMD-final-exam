@@ -117,16 +117,16 @@ inputs.forEach((input) => {
   input.addEventListener("blur", blurFunction);
 });
 
-//Sign up and Download the MIP SDK
+// //Sign up and Download the MIP SDK
 
-var downloadBtn = document.querySelector("#download");
-var modalBackground = document.querySelector(".modal-background");
-var modalX = document.querySelector(".modal-x");
+// var downloadBtn = document.querySelector("#download");
+// var modalBackground = document.querySelector(".modal-background");
+// var modalX = document.querySelector(".modal-x");
 
-downloadBtn.addEventListener("click", function () {
-  modalBackground.classList.add("background-active");
-});
+// downloadBtn.addEventListener("click", function () {
+//   modalBackground.classList.add("background-active");
+// });
 
-modalX.addEventListener("click", function () {
-  modalBackground.classList.remove("background-active");
-});
+// modalX.addEventListener("click", function () {
+//   modalBackground.classList.remove("background-active");
+// });

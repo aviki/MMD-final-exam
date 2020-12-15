@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>MIP SDK</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
@@ -23,22 +24,22 @@
         </div>
         <ul class="navbar__menu">
           <li class="navbar__item">
-            <a href="#home" class="navbar__links" id="home-page">Home</a>
+            <a href="index.html" class="navbar__links" id="home-page">Home</a>
           </li>
           <li class="navbar__item">
-            <a href="#about" class="navbar__links" id="about-page">About</a>
+            <a href="#index.html" class="navbar__links" id="about-page">About</a>
           </li>
           <li class="navbar__item">
-            <a href="#learn" class="navbar__links" id="learn-page">Learn</a>
+            <a href="index.html" class="navbar__links" id="learn-page">Learn</a>
           </li>
           <li class="navbar__item">
-            <a href="#community" class="navbar__links" id="community-page">Community</a>
+            <a href="index.html" class="navbar__links" id="community-page">Community</a>
           </li>
           <li class="navbar__item">
-            <a href="#downloads" class="navbar__links" id="download-page">Downloads</a>
+            <a href="downloads.html" class="navbar__links" id="download-page">Downloads</a>
           </li>
           <li class="navbar__btn">
-            <a href="#sign-up" class="button" class="modal-btn" id="signup">SIGN UP</a>
+            <a href="#sign-up" class="button" class="modal-btn" id="signup">SIGN&nbspUP</a>
           </li>
         </ul>
       </div>
@@ -50,7 +51,7 @@
       <div class="modal">
         <h2>Developer Update</h2>
         <form id="signup-form">
-          <div class="input-container">
+          <div class="input-container-newsletter">
             <input type="text" name="first-name" class="input" />
             <label for="name" name="first-name">First name </label>
             <span>First name</span>
@@ -58,7 +59,7 @@
             <i class="fa fa-exclamation-circle"></i>
             <small>Error message</small>
           </div>
-          <div class="input-container">
+          <div class="input-container-newsletter">
             <input type="text" name="last-name" class="input" />
             <label for="name">Last name </label>
             <span>Last name</span>
@@ -67,7 +68,7 @@
             <i class="fa fa-exclamation-circle"></i>
             <small>Error message</small>
           </div>
-          <div class="input-container">
+          <div class="input-container-newsletter">
             <input type="email" name="email" class="input" />
             <label for="email">Email </label>
             <span>Email</span>
@@ -85,81 +86,50 @@
 
     <!-- Hero Section -->
 
-    <div class="hero" id="home">
+    <div class="hero" id="thank-you">
       <div class="hero__container">
-        <h1 class="hero__heading">MIP SDK</h1>
-        <div class="hero__description">Create applications and device drivers for XProtect with the Milestone Integration Platform Software Development Kit to <br /><span class="typing"></span></div>
+        <h1 class="hero__heading">Thank you for signing up</h1>
+        <div class="hero__description">Download the SDK and start the development journey today.</div>
         <div class="btn__container">
-          <span class="btn__item"><a href="https://doc.developer.milestonesys.com/html/index.html" class="white-btn">GET STARTED</a></span>
-          <span class="btn__item"><a href="downloads.html" class="border-btn">DOWNLOADS</a></span>
+          <span class="btn__item" id="sdk-button"><a href="https://doc.developer.milestonesys.com/html/index.html" class="white-btn">MIP&nbspSDK&nbsp2020&nbspR3&nbsp▼</a></span>
+          <span class="btn__item" id="mobile-sdk-button"><a href="https://www.milestonesys.com/community/become-a-partner/technology-partner-program/" class="border-btn">MIP&nbspSDK&nbspMOBILE&nbsp2020&nbspR3&nbsp▼</a></span>
         </div>
       </div>
     </div>
 
-    <!-- About Section -->
-    <div class="main" id="about">
+    <!-- Model for succsessful download  -->
+    <div class="thanks-modal-bg">
+      <div class="thanks-modal">
+        <h2>Thank you for downloading the MIP SDK</h2>
+        <img src="assets/check-mark.png" alt="" />
+        <button id="btn-modal-back-home">BACK TO HOME</button>
+        <span class="thanks-modal-close">X</span>
+      </div>
+    </div>
+
+    <!-- Technology Partner Section -->
+    <div class="main" id="technology-partners">
       <div class="main__container">
         <div class="main__img--container">
-          <img src="assets/software-hardware.png" alt="" />
+          <img src="assets/technology-partner.png" alt="" />
+          <span><a href="#" class="blue-btn">READ MORE</a></span>
         </div>
         <div class="main__content">
-          <h3>ABOUT</h3>
-          <h1>Create applications & device drivers for XProtect</h1>
+          <h3>DEVELOPER JOURNEY</h3>
+          <h1>What is the Milestone Technology Partner Program?</h1>
           <p>
-            The Milestone Integration Platform Software Development Kit (MIP SDK) is a set of comprehensive tools that makes it easy to create applications or device drivers that will work for Milestone XProtect® video management software (VMS).*
+            The Milestone Technology Partner Program is a program for vendors offering applications, devices, hardware and services that are complementary to the Milestone XProtect video management platform.
             <br />
-            The development framework allows you to seamlessly integrate applications, hardware, cameras and other devices - all from Milestone Technology Partners, end customers or third-party vendors.<br />
+            Our Technology Partner Program represents a cooperation between Milestone and you as a technology partner in the program with a rich set of benefits and requirements.<br />
 
-            These form a solution that can be managed in the XProtect software. The open architecture of XProtect together with the MIP SDK allow for endless possibilities to add features and functionality for creating powerful, new surveillance
-            solutions.
+            As a Technology Partner, you can leverage the Milestone brand and Milestone’s global market channel and benefit from a wide range of marketing resources and activities.
           </p>
         </div>
       </div>
     </div>
-    <div class="main" id="learn">
-      <div class="main__container">
-        <div class="main__content">
-          <h3>LEARN</h3>
-          <h1>MIP SDK Getting Started Guide</h1>
-          <p>This guide serves as a point of reference for documentation and contains an introduction to the different ways of making integrations.</p>
-        </div>
-        <div class="main__img--container">
-          <img src="assets/guide.png" alt="" />
-          <span><a href="#" class="blue-btn">DOWNLOAD GUIDE</a></span>
-        </div>
-      </div>
 
+    <div class="main white-section" id="join-forum">
       <div class="main__container">
-        <div class="main__img--container">
-          <img src="assets/training.png" alt="" />
-          <span><a href="#" class="blue-btn">SIGN UP FOR TRAINING</a></span>
-        </div>
-        <div class="main__content">
-          <h3>LEARN</h3>
-          <h1>Sign up for MIP SDK training</h1>
-          <p>Easy-to-use development toolkit: Contains application and code samples, proven Milestone library and code components and Microsoft® Visual Studio project templates to help create new integrations.</p>
-        </div>
-      </div>
-
-      <div class="main__container">
-        <div class="main__img--container">
-          <img src="assets/training.png" alt="" />
-          <span><a href="#" class="blue-btn">SIGN UP FOR TRAINING</a></span>
-        </div>
-        <div class="main__content">
-          <h3>LEARN</h3>
-          <h1>Video tutorials</h1>
-          <p>Check out our two MIP SDK related play lists on Milestone Systems YouTube channel. Learn developing MIP SDK Component integrations and Plug-in integrations.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="main" id="community">
-      <div class="main__container">
-        <div class="main__img--container">
-          <img src="assets/community.png" alt="" />
-          <span><a href="#" class="blue-btn">JOIN DEVELOPER FORUM</a></span>
-        </div>
         <div class="main__content">
           <h3>COMMUNITY</h3>
           <h1>Need help with MIP SDK?</h1>
@@ -167,6 +137,10 @@
             Milestone Developer Forum makes it easier for you as developers in the open platform community to pose questions for and share inspiration with your peers. Use the link to find answers on MIP SDK development issues or post questions
             yourself.
           </p>
+        </div>
+        <div class="main__img--container">
+          <img src="assets/community.png" alt="" />
+          <span><a href="#" class="blue-btn">JOIN DEVELOPER FORUM</a></span>
         </div>
       </div>
     </div>
@@ -191,7 +165,6 @@
         </ul>
       </div>
     </footer>
-    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-    <script type="module" src="./script.js"></script>
+    <script type="module" src="download-page.js"></script>
   </body>
 </html>
