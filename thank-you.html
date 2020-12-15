@@ -24,22 +24,22 @@
         </div>
         <ul class="navbar__menu">
           <li class="navbar__item">
-            <a href="index.html" class="navbar__links" id="home-page">Home</a>
+            <a href="#home-page" class="navbar__links" id="home-page">Home</a>
           </li>
           <li class="navbar__item">
-            <a href="#index.html" class="navbar__links" id="about-page">About</a>
+            <a href="#about-page" class="navbar__links" id="about-page">About</a>
           </li>
           <li class="navbar__item">
-            <a href="index.html" class="navbar__links" id="learn-page">Learn</a>
+            <a href="#learn-page" class="navbar__links" id="learn-page">Learn</a>
           </li>
           <li class="navbar__item">
-            <a href="index.html" class="navbar__links" id="community-page">Community</a>
+            <a href="#community-page" class="navbar__links" id="community-page">Community</a>
           </li>
           <li class="navbar__item">
             <a href="downloads.html" class="navbar__links" id="download-page">Downloads</a>
           </li>
           <li class="navbar__btn">
-            <a href="#sign-up" class="button" class="modal-btn" id="signup">SIGN&nbspUP</a>
+            <a href="" class="button" class="modal-btn" id="signup">SIGN&nbspUP</a>
           </li>
         </ul>
       </div>
@@ -49,7 +49,9 @@
 
     <div class="modal-bg">
       <div class="modal">
-        <h2>Developer Update</h2>
+        <div class="modal-info">
+          <h1>Developer Update</h1>
+        </div>
         <form id="signup-form">
           <div class="input-container-newsletter">
             <input type="text" name="first-name" class="input" />
@@ -91,16 +93,18 @@
         <h1 class="hero__heading">Thank you for signing up</h1>
         <div class="hero__description">Download the SDK and start the development journey today.</div>
         <div class="btn__container">
-          <span class="btn__item" id="sdk-button"><a href="https://doc.developer.milestonesys.com/html/index.html" class="white-btn">MIP&nbspSDK&nbsp2020&nbspR3&nbsp▼</a></span>
-          <span class="btn__item" id="mobile-sdk-button"><a href="https://www.milestonesys.com/community/become-a-partner/technology-partner-program/" class="border-btn">MIP&nbspSDK&nbspMOBILE&nbsp2020&nbspR3&nbsp▼</a></span>
+          <span class="btn__item"><a id="sdk-button" class="white-btn">MIP&nbspSDK&nbsp2020&nbspR3&nbsp►</a></span>
+          <span class="btn__item"><a class="border-btn" id="mobile-sdk-button">MIP&nbspSDK&nbspMOBILE&nbsp2020&nbspR3&nbsp►</a></span>
         </div>
       </div>
     </div>
 
-    <!-- Model for succsessful download  -->
+    <!-- Modal for succsessful download  -->
     <div class="thanks-modal-bg">
-      <div class="thanks-modal">
-        <h2>Thank you for downloading the MIP SDK</h2>
+      <div class="modal" id="thanks-modal">
+        <div class="modal-info">
+          <h1>Thank you for downloading the MIP SDK</h1>
+        </div>
         <img src="assets/check-mark.png" alt="" />
         <button id="btn-modal-back-home">BACK TO HOME</button>
         <span class="thanks-modal-close">X</span>
@@ -165,6 +169,6 @@
         </ul>
       </div>
     </footer>
-    <script type="module" src="download-page.js"></script>
+    <script type="module" src="thank-you.js"></script>
   </body>
 </html>

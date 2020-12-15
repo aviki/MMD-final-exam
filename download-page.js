@@ -250,18 +250,3 @@ function setSuccessFor(input) {
 function isEmail(email) {
   return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
-
-// Thank you for downloading the SDK pop-up modal
-
-var sdkModalBtn = document.querySelector("#sdk-button");
-var mobileSdkModalBtn = document.querySelector("#mobile-sdk-button");
-var thanksModalBg = document.querySelector(".thanks-modal-bg");
-var thanksModalClose = document.querySelector(".thanks-modal-close");
-
-sdkModalBtn.addEventListener("click", function () {
-  thanksModalBg.classList.add("bg-active");
-});
-
-thanksModalClose.addEventListener("click", function () {
-  thanksModalBg.classList.remove("bg-active");
-});

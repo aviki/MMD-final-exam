@@ -1,5 +1,3 @@
-// window.addEventListener("DOMContentLoaded", init);
-
 const menu = document.querySelector("#mobile-menu");
 const menuLinks = document.querySelector(".navbar__menu");
 const navLogo = document.querySelector("#navbar__logo");
@@ -21,7 +19,7 @@ const highLightMenu = () => {
   const aboutMenu = document.querySelector("#about-page");
   const learnMenu = document.querySelector("#learn-page");
   const communityMenu = document.querySelector("#community-page");
-  const downloadMenu = document.querySelector("#download-page");
+  //   const downloadMenu = document.querySelector("#download-page");
   let scrollPos = window.scrollY;
   console.log(scrollPos);
 
@@ -43,11 +41,6 @@ const highLightMenu = () => {
   } else if (window.innerWidth > 960 && scrollPos < 3200) {
     communityMenu.classList.add("highlight");
     learnMenu.classList.remove("highlight");
-    downloadMenu.classList.remove("highlight");
-    return;
-  } else if (window.innerWidth > 960 && scrollPos < 4000) {
-    downloadMenu.classList.add("highlight");
-    communityMenu.classList.remove("highlight");
     return;
   }
 
@@ -71,16 +64,6 @@ const hideMobileMenu = () => {
 
 menuLinks.addEventListener("click", hideMobileMenu);
 navLogo.addEventListener("click", hideMobileMenu);
-
-// Typing animation script
-
-var typed = new Typewriter(".typing", {
-  strings: ["PREVENT.", "PROTECT.", "PROVE."],
-  typeSpeed: 100,
-  backSpeed: 600,
-  autoStart: true,
-  loop: true,
-});
 
 // Sign up for Developer Update modal script
 
@@ -115,4 +98,26 @@ function blurFunction() {
 inputs.forEach((input) => {
   input.addEventListener("focus", focusFunction);
   input.addEventListener("blur", blurFunction);
+});
+
+// Thank you for downloading the SDK pop-up modal
+
+var sdkModalBtn = document.querySelector("#sdk-button");
+var mobileSdkModalBtn = document.querySelector("#mobile-sdk-button");
+var thanksModalBg = document.querySelector(".thanks-modal-bg");
+var thanksModalClose = document.querySelector(".thanks-modal-close");
+
+//Click event for MIP SDK button
+sdkModalBtn.addEventListener("click", function () {
+  thanksModalBg.classList.add("thanks-modal-active");
+});
+
+// Click event for Mobile MIP SDK button
+mobileSdkModalBtn.addEventListener("click", function () {
+  thanksModalBg.classList.add("thanks-modal-active");
+});
+
+//Close the modal
+thanksModalClose.addEventListener("click", function () {
+  thanksModalBg.classList.remove("thanks-modal-active");
 });
