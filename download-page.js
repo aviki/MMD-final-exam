@@ -21,7 +21,7 @@ const highLightMenu = () => {
   const communityMenu = document.querySelector("#community-page");
   const downloadMenu = document.querySelector("#download-page");
   let scrollPos = window.scrollY;
-  console.log(scrollPos);
+  //   console.log(scrollPos);
 
   // adds "highlight class to my menu items"
   if (window.innerWidth > 960 && scrollPos < 600) {
@@ -108,11 +108,30 @@ inputs.forEach((input) => {
 //Sign up and Download the MIP SDK
 
 var downloadBtn = document.querySelector("#download");
+var submitBtn = document.getElementById("submit");
 var modalBackground = document.querySelector(".modal-background");
 var modalX = document.querySelector(".modal-x");
 
 downloadBtn.addEventListener("click", function () {
   modalBackground.classList.add("background-active");
+});
+
+submitBtn.addEventListener("click", function () {
+  const inputContainers = document.querySelectorAll(".input-container");
+  console.log(inputContainers);
+  let allInputCorrect = true;
+  inputContainers.forEach((element) => {
+    if (!element.classList.contains("success")) {
+      setErrorFor(element.querySelector("input"), "baj");
+      allInputCorrect = false;
+    }
+    console.log(element);
+    console.log(element.classList);
+  });
+  console.log(allInputCorrect);
+  if (allInputCorrect) {
+    modalBackground.classList.remove("background-active");
+  }
 });
 
 modalX.addEventListener("click", function () {
@@ -128,20 +147,41 @@ const email = document.getElementById("email");
 const company = document.getElementById("company");
 const jobTitle = document.getElementById("job-title");
 
-downloadForm.addEventListener("submit", (e) => {
+// If input field was clicked and out of focus again, call function that checks if they are blank
+firstName.addEventListener("blur", (e) => {
   e.preventDefault();
 
-  checkInputs();
+  firstNameCheck();
 });
 
-function checkInputs() {
-  //get values from the inputs
-  const firstNameValue = firstName.value.trim(); //trim removes all the white space from the input
-  const lastNameValue = lastName.value.trim();
-  const emailValue = email.value.trim();
-  const companyValue = company.value.trim();
-  const jobTitleValue = jobTitle.value.trim();
+lastName.addEventListener("blur", (e) => {
+  e.preventDefault();
 
+  lastNameCheck();
+});
+
+email.addEventListener("blur", (e) => {
+  e.preventDefault();
+
+  emailCheck();
+});
+
+company.addEventListener("blur", (e) => {
+  e.preventDefault();
+
+  companyCheck();
+});
+
+jobTitle.addEventListener("blur", (e) => {
+  e.preventDefault();
+
+  jobTitleCheck();
+});
+
+//Functions to check if input field if blank
+
+function firstNameCheck() {
+  const firstNameValue = firstName.value.trim(); //trim removes all the white space from the input
   if (firstNameValue === "") {
     //show error
     //add error class
@@ -150,26 +190,42 @@ function checkInputs() {
     //add success class
     setSuccessFor(firstName);
   }
+}
 
+function lastNameCheck() {
+  const lastNameValue = lastName.value.trim();
   if (lastNameValue === "") {
     setErrorFor(lastName, "Last name is required");
   } else {
     setSuccessFor(lastName);
   }
+}
 
+function emailCheck() {
+  const emailValue = email.value.trim();
   if (emailValue === "") {
     setErrorFor(email, "Email is required");
-    //   } else if (!validateEmail(emailValue)) {
-    //     setErrorFor(email, "Email is not valid");
-    //   } else {
+  } else if (!isEmail(emailValue)) {
+    setErrorFor(email, "Email is not valid");
   } else {
     setSuccessFor(email);
   }
+}
 
+function companyCheck() {
+  const companyValue = company.value.trim();
   if (companyValue === "") {
     setErrorFor(company, "Company is required");
   } else {
     setSuccessFor(company);
+  }
+}
+function jobTitleCheck() {
+  const jobTitleValue = jobTitle.value.trim();
+  if (jobTitleValue === "") {
+    setErrorFor(jobTitle, "Job title is required");
+  } else {
+    setSuccessFor(jobTitle);
   }
 }
 
@@ -190,10 +246,6 @@ function setSuccessFor(input) {
   inputContainer.className = "input-container success";
 }
 
-// function validateEmail(email) {
-//   if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(myForm.emailAddr.value)) {
-//     return true;
-//   }
-//   alert("You have entered an invalid email address!");
-//   return false;
-// }
+function isEmail(email) {
+  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+}
