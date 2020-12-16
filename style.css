@@ -85,7 +85,7 @@
   align-items: center;
   cursor: pointer;
   text-decoration: none;
-  height: 80px;
+  max-height: 80px;
 }
 
 .navbar__menu {
@@ -94,9 +94,9 @@
   list-style: none;
 }
 
-.navbar__item {
+/* .navbar__item {
   height: 80px;
-}
+} */
 
 .navbar__links {
   color: var(--developer-blue);
@@ -114,9 +114,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 1rm;
+  /* padding: 0 1rm; */
   width: 100%;
-  margin-left: 130px;
 }
 
 .button {
@@ -143,7 +142,7 @@
   color: #ffffff;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1100px) {
   .navbar__container {
     display: flex;
     justify-content: space-between;
@@ -267,10 +266,10 @@
   max-height: 100vh;
   overflow-y: scroll;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  margin-top: 15vh;
+  /* margin-top: 15vh; */
   /* box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.8); */
 }
 
@@ -285,13 +284,15 @@
   border-radius: 4px;
   cursor: pointer;
   font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .modal-close {
   position: absolute;
   top: 20px;
   right: 20px;
-  color: var(--dark-gray);
+  color: white;
   font-weight: 900;
   cursor: pointer;
 }
@@ -307,7 +308,6 @@
 
 .input-container-newsletter {
   position: relative;
-  margin: 1rem 0;
   padding-bottom: 20px;
 }
 
@@ -543,9 +543,9 @@
   margin-bottom: 2rem;
 } */
 
-/* Mobile Responsive */
+/* Main Mobile Responsive */
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 800px) {
   .main__container {
     display: grid;
     grid-template-columns: 1fr;
@@ -624,7 +624,7 @@ form {
 
 .modal-info {
   background: var(--milestone-blue);
-  padding: 1.5rem 1rem;
+  padding: 0.5rem;
   width: 100%;
   color: white;
   display: flex;
@@ -632,12 +632,19 @@ form {
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  margin-bottom: 15px;
 }
 
 .modal-info p {
   margin-top: 1rem;
   padding-left: 1rem;
   font-size: 13px;
+}
+
+.modal-info h1 {
+  font-size: 25px;
+  font-weight: 300;
+  margin: 20px;
 }
 
 .modal-x {
@@ -663,7 +670,7 @@ form {
 
 .input-container {
   position: relative;
-  margin: 1rem 0;
+  margin: auto;
   padding-bottom: 20px;
 }
 
@@ -770,8 +777,8 @@ form {
 @media screen and (max-width: 1200px) {
   .modal {
     width: 90%;
-    margin-top: 25vh;
-    height: 75vh;
+    margin-top: 10vh;
+    height: 90vh;
     overflow-y: scroll;
   }
 }
@@ -893,8 +900,8 @@ form {
 
 .thanks-modal-close {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 15px;
+  right: 15px;
   color: white;
   font-weight: 900;
   cursor: pointer;
@@ -902,4 +909,10 @@ form {
 
 #btn-modal-back-home {
   cursor: pointer;
+  margin: 20px 0;
+}
+
+#btn-modal-back-home a {
+  text-decoration: none;
+  color: white;
 }

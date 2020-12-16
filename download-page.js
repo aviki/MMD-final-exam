@@ -130,7 +130,7 @@ submitBtn.addEventListener("click", function () {
   });
   console.log(allInputCorrect);
   if (allInputCorrect) {
-    modalBackground.classList.remove("background-active");
+    location.href = "thank-you.html";
   }
 });
 
