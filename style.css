@@ -28,6 +28,11 @@
   color: var(--developer-blue);
   transition: all 0.3s ease;
   font-weight: 600;
+  cursor: pointer;
+}
+
+.main-button-magin {
+  margin: 30px 0 30px 0;
 }
 
 .blue-btn {
@@ -41,6 +46,7 @@
   color: white;
   transition: all 0.3s ease;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .border-btn {
@@ -53,6 +59,7 @@
   color: white;
   transition: all 0.3s ease;
   font-weight: 600;
+  cursor: pointer;
 }
 
 /* Navigation Bar */
@@ -94,10 +101,6 @@
   list-style: none;
 }
 
-/* .navbar__item {
-  height: 80px;
-} */
-
 .navbar__links {
   color: var(--developer-blue);
   display: flex;
@@ -129,6 +132,7 @@
   color: white;
   transition: all 0.3s ease;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .navbar__links:hover {
@@ -264,7 +268,7 @@
   background-color: white;
   width: 30%;
   max-height: 100vh;
-  overflow-y: scroll;
+  overflow-y: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -281,7 +285,7 @@
   background-color: var(--milestone-blue);
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 50px;
   cursor: pointer;
   font-weight: 600;
   cursor: pointer;
@@ -306,16 +310,16 @@
   transition: all 0.3s ease;
 }
 
-.input-container-newsletter {
+.input-container-signup {
   position: relative;
   padding-bottom: 20px;
 }
 
-.input-container-newsletter label {
+.input-container-signup label {
   position: absolute;
   top: 50%;
   left: 15px;
-  transform: translateY(-50%);
+  transform: translateY(-100%);
   padding: 0 0.4rem;
   font-size: 0.9rem;
   font-weight: 400;
@@ -324,7 +328,7 @@
   transition: 0.5s;
 }
 
-.input-container-newsletter span {
+.input-container-signup span {
   position: absolute;
   top: 0;
   left: 25px;
@@ -336,8 +340,8 @@
   z-index: 500;
 }
 
-.input-container-newsletter span::before,
-.input-container-newsletter span::after {
+.input-container-signup span::before,
+.input-container-signup span::after {
   content: "";
   position: absolute;
   width: 10%;
@@ -349,36 +353,36 @@
   transform: translateY(-50%);
 }
 
-.input-container-newsletter span:before {
+.input-container-signup span:before {
   left: 50%;
 }
 
-.input-container-newsletter span:after {
+.input-container-signup span:after {
   right: 50%;
 }
 
-.input-container-newsletter.focus label {
+.input-container-signup.focus label {
   top: 0;
   transform: translateY(-50%);
   left: 25px;
   font-size: 0.8rem;
 }
 
-.input-container-newsletter.focus span:before,
-.input-container-newsletter.focus span:after {
+.input-container-signup.focus span:before,
+.input-container-signup.focus span:after {
   width: 50%;
   opacity: 1;
 }
 
 /* Form validation style */
-.input-container-newsletter i {
+.input-container-signup i {
   position: absolute;
   top: 12px;
   right: 10px;
   visibility: hidden;
 }
 
-.input-container-newsletter small {
+.input-container-signup small {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -387,26 +391,26 @@
 
 /* Active classes if input successful */
 
-.input-container-newsletter.success input {
+.input-container-signup.success input {
   border-color: #2ecc71;
 }
 
-.input-container-newsletter.success i.fa-check-circle {
+.input-container-signup.success i.fa-check-circle {
   visibility: visible;
   color: #2ecc71;
 }
 
 /* Error classes if input is not successful */
-.input-container-newsletter.error input {
+.input-container-signup.error input {
   border-color: #e74c3c;
 }
 
-.input-container-newsletter.error i.fa-exclamation-circle {
+.input-container-signup.error i.fa-exclamation-circle {
   visibility: visible;
   color: #e74c3c;
 }
 
-.input-container-newsletter.error small {
+.input-container-signup.error small {
   visibility: visible;
   color: #e74c3c;
 }
@@ -489,7 +493,7 @@
 
 .main {
   background-color: var(--light-gray);
-  padding: 3rem 0;
+  padding-top: 1rem;
 }
 
 .main__container {
@@ -498,7 +502,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  padding-top: 7rem;
+  padding: 5rem 2rem;
   height: 90%;
   z-index: 1;
   width: 100%;
@@ -559,20 +563,22 @@
   .main__img--container {
     display: flex;
     justify-content: center;
+    order: 1;
+    margin: 1rem 0;
   }
 
   .main__img--container img {
     max-width: 50%;
-    margin-bottom: 2rem;
   }
 
   .main__content {
     text-align: center;
     padding: 0 1.5rem;
+    order: 0;
   }
 
   .main__content h3 {
-    margin-top: 3rem;
+    margin-top: 2rem;
     font-size: 1.3rem;
   }
 }
@@ -678,7 +684,7 @@ form {
   position: absolute;
   top: 50%;
   left: 15px;
-  transform: translateY(-50%);
+  transform: translateY(-100%);
   padding: 0 0.4rem;
   font-size: 0.9rem;
   font-weight: 400;
@@ -778,8 +784,8 @@ form {
   .modal {
     width: 90%;
     margin-top: 10vh;
-    height: 90vh;
-    overflow-y: scroll;
+    max-height: 90vh;
+    overflow-y: auto;
   }
 }
 
@@ -891,7 +897,7 @@ form {
 }
 
 #thanks-modal {
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 
 .modal img {
@@ -914,5 +920,89 @@ form {
 
 #btn-modal-back-home a {
   text-decoration: none;
+  color: white;
+}
+
+/*Based on https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_checkbox*/
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: var(--milestone-blue);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+a:link i {
+  color: white;
+}
+
+a:visited i {
+  color: white;
+}
+
+a:hover i {
+  color: white;
+}
+
+a:active i {
   color: white;
 }

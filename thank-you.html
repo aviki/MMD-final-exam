@@ -46,40 +46,41 @@
     </nav>
 
     <!-- Modal for "Sign up" button -->
-
     <div class="modal-bg">
       <div class="modal">
         <div class="modal-info">
           <h1>Developer Update</h1>
+          <p>Get the latest technology and development related news by subscribing for our quarterly newsletter.</p>
         </div>
+
         <form id="signup-form">
-          <div class="input-container-newsletter">
-            <input type="text" name="first-name" class="input" />
-            <label for="name" name="first-name">First name </label>
+          <div class="input-container-signup">
+            <input type="text" name="first-name-signup" class="input" id="first-name-signup" />
+            <label for="first-name-signup">First name </label>
             <span>First name</span>
             <i class="fa fa-check-circle"></i>
             <i class="fa fa-exclamation-circle"></i>
             <small>Error message</small>
           </div>
-          <div class="input-container-newsletter">
-            <input type="text" name="last-name" class="input" />
-            <label for="name">Last name </label>
+          <div class="input-container-signup">
+            <input type="text" name="last-name-signup" class="input" id="last-name-signup" />
+            <label for="last-name-signup">Last name </label>
             <span>Last name</span>
 
             <i class="fa fa-check-circle"></i>
             <i class="fa fa-exclamation-circle"></i>
             <small>Error message</small>
           </div>
-          <div class="input-container-newsletter">
-            <input type="email" name="email" class="input" />
-            <label for="email">Email </label>
+          <div class="input-container-signup">
+            <input type="email" name="email-signup" class="input" id="email-signup" />
+            <label for="email-signup">Email</label>
             <span>Email</span>
 
             <i class="fa fa-check-circle"></i>
             <i class="fa fa-exclamation-circle"></i>
             <small>Error message</small>
           </div>
-          <button>SUBSCRIBE</button>
+          <button id="subscribe">SUBSCRIBE</button>
         </form>
 
         <span class="modal-close">X</span>
@@ -116,7 +117,7 @@
       <div class="main__container">
         <div class="main__img--container">
           <img src="assets/technology-partner.png" alt="" />
-          <span><a href="#" class="blue-btn">READ MORE</a></span>
+          <span class="main-button-magin"><a href="https://www.milestonesys.com/community/become-a-partner/technology-partner-program/" target="_blank" class="blue-btn">READ MORE</a></span>
         </div>
         <div class="main__content">
           <h3>DEVELOPER JOURNEY</h3>
@@ -144,7 +145,7 @@
         </div>
         <div class="main__img--container">
           <img src="assets/community.png" alt="" />
-          <span><a href="#" class="blue-btn">JOIN DEVELOPER FORUM</a></span>
+          <span class="main-button-magin"><a href="https://developer.milestonesys.com/s/" target="_blank" class="blue-btn">JOIN DEVELOPER FORUM</a></span>
         </div>
       </div>
     </div>
@@ -156,19 +157,28 @@
         <div class="connect">
           <p>Connect with us. We would like to stay in touch.</p>
           <ul class="some">
-            <li><a href="#"></a><i class="fa fa-facebook"></i></li>
-            <li><a href="#"></a><i class="fa fa-instagram"></i></li>
-            <li><a href="#"></a><i class="fa fa-linkedin"></i></li>
-            <li><a href="#"></a><i class="fa fa-twitter"></i></li>
+            <li>
+              <a href="https://www.facebook.com/milestonesys/" target="_blank"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/milestonesystems/" target="_blank"><i class="fa fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/milestone-systems" target="_blank"><i class="fa fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/milestonesys" target="_blank"><i class="fa fa-twitter"></i></a>
+            </li>
           </ul>
         </div>
         <ul class="additional-info">
-          <li><a href="#">Legal</a> |</li>
-          <li><a href="#">Privacy</a> |</li>
-          <li><a href="#">Site Map</a></li>
+          <li><a href="https://www.milestonesys.com/terms-of-use/" target="_blank">Legal</a> |</li>
+          <li><a href="https://www.milestonesys.com/privacy-policy/" target="_blank">Privacy</a> |</li>
+          <li><a href="https://www.milestonesys.com/about-us/jobs-and-careers/" target="_blank">Careers</a></li>
         </ul>
       </div>
     </footer>
     <script type="module" src="thank-you.js"></script>
+    <script type="module" src="./signup-form-validation.js"></script>
   </body>
 </html>

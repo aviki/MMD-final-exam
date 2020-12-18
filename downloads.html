@@ -46,46 +46,46 @@
     </nav>
 
     <!-- Modal for "Sign up" button -->
-
     <div class="modal-bg">
       <div class="modal">
         <div class="modal-info">
-          <h2>Developer Update</h2>
+          <h1>Developer Update</h1>
+          <p>Get the latest technology and development related news by subscribing for our quarterly newsletter.</p>
         </div>
-        <form class="success" class="error">
-          <div class="input-container-newsletter">
-            <input type="text" name="first-name" class="input" />
-            <label for="name" name="first-name">First name </label>
+
+        <form id="signup-form">
+          <div class="input-container-signup">
+            <input type="text" name="first-name-signup" class="input" id="first-name-signup"/>
+            <label for="first-name-signup">First name </label>
             <span>First name</span>
             <i class="fa fa-check-circle"></i>
             <i class="fa fa-exclamation-circle"></i>
             <small>Error message</small>
           </div>
-          <div class="input-container-newsletter">
-            <input type="text" name="last-name" class="input" />
-            <label for="name">Last name </label>
+          <div class="input-container-signup">
+            <input type="text" name="last-name-signup" class="input" id="last-name-signup"/>
+            <label for="last-name-signup">Last name </label>
             <span>Last name</span>
 
             <i class="fa fa-check-circle"></i>
             <i class="fa fa-exclamation-circle"></i>
             <small>Error message</small>
           </div>
-          <div class="input-container-newsletter">
-            <input type="email" name="email" class="input" />
-            <label for="email">Email </label>
+          <div class="input-container-signup">
+            <input type="email" name="email-signup" class="input" id="email-signup"/>
+            <label for="email-signup">Email</label>
             <span>Email</span>
 
             <i class="fa fa-check-circle"></i>
             <i class="fa fa-exclamation-circle"></i>
             <small>Error message</small>
           </div>
+          <button type="button" id="subscribe">SUBSCRIBE</button>
         </form>
 
-        <button>SUBSCRIBE</button>
         <span class="modal-close">X</span>
       </div>
     </div>
-
     <!-- Hero Section -->
 
     <div class="hero" id="downloads">
@@ -95,8 +95,8 @@
           On October 5th, we released the XProtect 2020 R2 MIP SDK .NET Framework .dll binaries as NuGet packages. You can add the needed Milestone XProtect NuGet packages to your Visual Studio projects and let Visual Studio handle the download.
         </div>
         <div class="btn__container">
-          <span class="btn__item"><a href="https://www.milestonesys.com/content-hub/developer-update/2020/december/sdk-on-nuget/" class="white-btn">GET STARTED</a></span>
-          <span class="btn__item"><a href="https://www.nuget.org/profiles/milestonesys" class="border-btn">NUGET&nbspPACKAGES</a></span>
+          <span class="btn__item"><a href="https://www.milestonesys.com/content-hub/developer-update/2020/december/sdk-on-nuget/" target="_blank" class="white-btn">GET STARTED</a></span>
+          <span class="btn__item"><a href="https://www.nuget.org/profiles/milestonesys" target="_blank" class="border-btn">NUGET&nbspPACKAGES</a></span>
         </div>
       </div>
     </div>
@@ -113,7 +113,7 @@
         </div>
         <div class="main__img--container">
           <img src="assets/download.png" alt="" />
-          <span><a class="blue-btn modal-btn" id="download">Download MIP SDK</a></span>
+          <span class="main-button-magin"><a class="blue-btn modal-btn" id="download">Download MIP SDK</a></span>
         </div>
       </div>
     </div>
@@ -122,7 +122,7 @@
       <div class="main__container">
         <div class="main__img--container">
           <img src="assets/community.png" alt="" />
-          <span><a href="https://doc.developer.milestonesys.com/html/index.html" class="blue-btn">MIP SDK DOCUMENTATION</a></span>
+          <span class="main-button-magin"><a href="https://doc.developer.milestonesys.com/html/index.html" target="_blank" class="blue-btn">MIP SDK DOCUMENTATION</a></span>
         </div>
         <div class="main__content">
           <h3>DOWNLOADS</h3>
@@ -144,7 +144,7 @@
         </div>
         <div class="main__img--container">
           <img src="assets/globe.png" alt="" />
-          <span><a href="#" class="blue-btn">Download XProtect®</a></span>
+          <span class="main-button-magin"><a href="https://www.milestonesys.com/support/resources/download-software/" target="_blank" class="blue-btn">Download XProtect®</a></span>
         </div>
       </div>
 
@@ -204,37 +204,46 @@
                         <i class="fa fa-exclamation-circle"></i>
                         <small>Error message</small>
                     </div>
+                    <label class="checkbox-container">I accept the Terms and Conditions
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-container">Subscribe for quaterly newsletter
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
                     <button type="button" id="submit">SUBMIT</button> 
                 </form>
-
-                
                 <span class="modal-x">X</span>
             </div>
         </div>
     </div>
     <footer>
-        <div class="footer">
-          <div class="milestone-copyrights">
-            <p>Copyright © 2020 Milestone Systems A/S.</p>
-          </div>
-          <div class="connect">
-            <p class="connect">Connect with us. We would like to stay in touch.</p>
-            <ul class="some">
-              <li><a href="#"></a><i class="fa fa-facebook"></i></li>
-              <li><a href="#"></a><i class="fa fa-instagram"></i></li>
-              <li><a href="#"></a><i class="fa fa-linkedin"></i></li>
-              <li><a href="#"></a><i class="fa fa-twitter"></i></li>
-            </ul>
-          </div>
-          <ul class="additional-info">
-            <li><a href="#">Legal</a> |</li>
-            <li><a href="#">Privacy</a> |</li>
-            <li><a href="#">Site Map</a></li>
+      <div class="footer">
+        <div class="milestone-copyrights">
+          <p>Copyright © 2020 Milestone Systems A/S.</p>
+        </div>
+        <div class="connect">
+          <p>Connect with us. We would like to stay in touch.</p>
+          <ul class="some">
+            <li><a href="https://www.facebook.com/milestonesys/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/milestonesystems/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://www.linkedin.com/company/milestone-systems" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://twitter.com/milestonesys" target="_blank"><i class="fa fa-twitter"></i></a></li>
           </ul>
         </div>
-      </footer>
+        <ul class="additional-info">
+          <li><a href="https://www.milestonesys.com/terms-of-use/" target="_blank">Legal</a> |</li>
+          <li><a href="https://www.milestonesys.com/privacy-policy/" target="_blank">Privacy</a> |</li>
+          <li><a href="https://www.milestonesys.com/about-us/jobs-and-careers/" target="_blank">Careers</a></li>
+        </ul>
+      </div>
+    </footer>
       <script type="module" src="download-page.js"></script>
+      <script type="module" src="./signup-form-validation.js"></script>
   </body>
     
 </html>
+
+
 

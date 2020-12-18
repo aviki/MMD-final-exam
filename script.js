@@ -1,5 +1,3 @@
-// window.addEventListener("DOMContentLoaded", init);
-
 const menu = document.querySelector("#mobile-menu");
 const menuLinks = document.querySelector(".navbar__menu");
 const navLogo = document.querySelector("#navbar__logo");
@@ -26,28 +24,24 @@ const highLightMenu = () => {
   console.log(scrollPos);
 
   // adds "highlight class to my menu items"
-  if (window.innerWidth > 960 && scrollPos < 600) {
+  if (window.innerWidth > 960 && scrollPos < 200) {
     homeMenu.classList.add("highlight");
     aboutMenu.classList.remove("highlight");
     return;
-  } else if (window.innerWidth > 960 && scrollPos < 1400) {
+  } else if (window.innerWidth > 960 && scrollPos < 700) {
     aboutMenu.classList.add("highlight");
     homeMenu.classList.remove("highlight");
     learnMenu.classList.remove("highlight");
     return;
-  } else if (window.innerWidth > 960 && scrollPos < 2345) {
+  } else if (window.innerWidth > 960 && scrollPos < 2500) {
     learnMenu.classList.add("highlight");
     aboutMenu.classList.remove("highlight");
     communityMenu.classList.remove("highlight");
     return;
-  } else if (window.innerWidth > 960 && scrollPos < 3200) {
+  } else if (window.innerWidth > 960 && scrollPos < 3000) {
     communityMenu.classList.add("highlight");
     learnMenu.classList.remove("highlight");
     downloadMenu.classList.remove("highlight");
-    return;
-  } else if (window.innerWidth > 960 && scrollPos < 4000) {
-    downloadMenu.classList.add("highlight");
-    communityMenu.classList.remove("highlight");
     return;
   }
 
@@ -63,7 +57,7 @@ window.addEventListener("click", highLightMenu);
 
 const hideMobileMenu = () => {
   const menuBars = document.querySelector(".is-active");
-  if (window.innerWidth <= 768 && menuBars) {
+  if (window.innerWidth <= 1100 && menuBars) {
     menu.classList.toggle("is-active");
     menuLinks.classList.remove("active");
   }
@@ -72,7 +66,7 @@ const hideMobileMenu = () => {
 menuLinks.addEventListener("click", hideMobileMenu);
 navLogo.addEventListener("click", hideMobileMenu);
 
-// Typing animation script
+// Typing animation script: https://www.npmjs.com/package/typewriter-effect // I used the CDN version of the plugin, script tag in index.html
 
 var typed = new Typewriter(".typing", {
   strings: ["PREVENT.", "PROTECT.", "PROVE."],

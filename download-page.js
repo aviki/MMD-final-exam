@@ -13,55 +13,15 @@ menu.addEventListener("click", mobileMenu);
 
 // Show active menu when scrolling
 
-const highLightMenu = () => {
-  const elem = document.querySelector(".highlight");
-  const homeMenu = document.querySelector("#home-page");
-  const aboutMenu = document.querySelector("#about-page");
-  const learnMenu = document.querySelector("#learn-page");
-  const communityMenu = document.querySelector("#community-page");
-  const downloadMenu = document.querySelector("#download-page");
-  let scrollPos = window.scrollY;
-  //   console.log(scrollPos);
+const downloadMenu = document.querySelector("#download-page");
 
-  // adds "highlight class to my menu items"
-  if (window.innerWidth > 960 && scrollPos < 600) {
-    homeMenu.classList.add("highlight");
-    aboutMenu.classList.remove("highlight");
-    return;
-  } else if (window.innerWidth > 960 && scrollPos < 1400) {
-    aboutMenu.classList.add("highlight");
-    homeMenu.classList.remove("highlight");
-    learnMenu.classList.remove("highlight");
-    return;
-  } else if (window.innerWidth > 960 && scrollPos < 2345) {
-    learnMenu.classList.add("highlight");
-    aboutMenu.classList.remove("highlight");
-    communityMenu.classList.remove("highlight");
-    return;
-  } else if (window.innerWidth > 960 && scrollPos < 3200) {
-    communityMenu.classList.add("highlight");
-    learnMenu.classList.remove("highlight");
-    downloadMenu.classList.remove("highlight");
-    return;
-  } else if (window.innerWidth > 960 && scrollPos < 4000) {
-    downloadMenu.classList.add("highlight");
-    communityMenu.classList.remove("highlight");
-    return;
-  }
-
-  if ((elem && window.innerWidth < 960 && scrollPos < 600) || elem) {
-    elem.classList.remove("highlight");
-  }
-};
-
-window.addEventListener("scroll", highLightMenu);
-window.addEventListener("click", highLightMenu);
+downloadMenu.classList.add("highlight");
 
 // Close mobile Menu when clicking on a menu item
 
 const hideMobileMenu = () => {
   const menuBars = document.querySelector(".is-active");
-  if (window.innerWidth <= 768 && menuBars) {
+  if (window.innerWidth <= 1100 && menuBars) {
     menu.classList.toggle("is-active");
     menuLinks.classList.remove("active");
   }
@@ -97,6 +57,9 @@ function blurFunction() {
   let parent = this.parentNode;
   if (this.value == "") {
     parent.classList.remove("focus");
+    console.log("FOKUST");
+  } else {
+    console.log("nem vettem le");
   }
 }
 
@@ -122,7 +85,7 @@ submitBtn.addEventListener("click", function () {
   let allInputCorrect = true;
   inputContainers.forEach((element) => {
     if (!element.classList.contains("success")) {
-      setErrorFor(element.querySelector("input"), "baj");
+      setErrorFor(element.querySelector("input"), "Please fill out this field");
       allInputCorrect = false;
     }
     console.log(element);
@@ -237,13 +200,23 @@ function setErrorFor(input, message) {
   small.innerText = message;
 
   //add error class
-  inputContainer.className = "input-container error";
+  if (inputContainer.classList.contains("success")) {
+    inputContainer.classList.remove("success");
+  }
+  if (!inputContainer.classList.contains("error")) {
+    inputContainer.classList.add("error");
+  }
 }
 
 function setSuccessFor(input) {
   const inputContainer = input.parentElement;
   //add success class
-  inputContainer.className = "input-container success";
+  if (inputContainer.classList.contains("error")) {
+    inputContainer.classList.remove("error");
+  }
+  if (!inputContainer.classList.contains("success")) {
+    inputContainer.classList.add("success");
+  }
 }
 
 //Check if email valid with regex from stackoverflow(https://stackoverflow.com/questions/201323/how-to-validate-an-email-address-using-a-regular-expression)

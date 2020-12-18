@@ -35,7 +35,7 @@
             <a href="#community" class="navbar__links" id="community-page">Community</a>
           </li>
           <li class="navbar__item">
-            <a href="#downloads" class="navbar__links" id="download-page">Downloads</a>
+            <a href="downloads.html" class="navbar__links" id="download-page">Downloads</a>
           </li>
           <li class="navbar__btn">
             <a class="button" class="modal-btn" id="signup">SIGN&nbspUP</a>
@@ -50,42 +50,42 @@
       <div class="modal">
         <div class="modal-info">
           <h1>Developer Update</h1>
+          <p>Get the latest technology and development related news by subscribing for our quarterly newsletter.</p>
         </div>
 
         <form id="signup-form">
-          <div class="input-container-newsletter">
-            <input type="text" name="first-name" class="input" />
-            <label for="name" name="first-name">First name </label>
+          <div class="input-container-signup">
+            <input type="text" name="first-name-signup" class="input" id="first-name-signup" />
+            <label for="first-name-signup">First name </label>
             <span>First name</span>
             <i class="fa fa-check-circle"></i>
             <i class="fa fa-exclamation-circle"></i>
             <small>Error message</small>
           </div>
-          <div class="input-container-newsletter">
-            <input type="text" name="last-name" class="input" />
-            <label for="name">Last name </label>
+          <div class="input-container-signup">
+            <input type="text" name="last-name-signup" class="input" id="last-name-signup" />
+            <label for="last-name-signup">Last name </label>
             <span>Last name</span>
 
             <i class="fa fa-check-circle"></i>
             <i class="fa fa-exclamation-circle"></i>
             <small>Error message</small>
           </div>
-          <div class="input-container-newsletter">
-            <input type="email" name="email" class="input" />
-            <label for="email">Email </label>
+          <div class="input-container-signup">
+            <input type="email" name="email-signup" class="input" id="email-signup" />
+            <label for="email-signup">Email</label>
             <span>Email</span>
 
             <i class="fa fa-check-circle"></i>
             <i class="fa fa-exclamation-circle"></i>
             <small>Error message</small>
           </div>
-          <button id="subscribe">SUBSCRIBE</button>
+          <button type="button" id="subscribe">SUBSCRIBE</button>
         </form>
 
         <span class="modal-close">X</span>
       </div>
     </div>
-
     <!-- Hero Section -->
 
     <div class="hero" id="home">
@@ -93,14 +93,14 @@
         <h1 class="hero__heading">MIP SDK</h1>
         <div class="hero__description">Create applications and device drivers for XProtect with the Milestone Integration Platform Software Development Kit to <br /><span class="typing"></span></div>
         <div class="btn__container">
-          <span class="btn__item"><a href="https://doc.developer.milestonesys.com/html/index.html" class="white-btn">GET STARTED</a></span>
+          <span class="btn__item"><a href="https://doc.developer.milestonesys.com/html/index.html" target="_blank" class="white-btn">GET STARTED</a></span>
           <span class="btn__item"><a href="downloads.html" class="border-btn">DOWNLOADS</a></span>
         </div>
       </div>
     </div>
 
     <!-- About Section -->
-    <div class="main" id="about">
+    <div class="main white-section" id="about">
       <div class="main__container">
         <div class="main__img--container">
           <img src="assets/software-hardware.png" alt="" />
@@ -119,6 +119,7 @@
         </div>
       </div>
     </div>
+    <!-- Learn Section -->
     <div class="main" id="learn">
       <div class="main__container">
         <div class="main__content">
@@ -128,14 +129,14 @@
         </div>
         <div class="main__img--container">
           <img src="assets/guide.png" alt="" />
-          <span><a href="#" class="blue-btn">DOWNLOAD GUIDE</a></span>
+          <span class="main-button-magin"><a target="_blank" href="https://dqhg7aoeit2za.cloudfront.net/m/299bb22321041592/original/MIP-SDK-Getting-Started-Guide-.pdf" class="blue-btn">DOWNLOAD GUIDE</a></span>
         </div>
       </div>
 
       <div class="main__container">
         <div class="main__img--container">
           <img src="assets/training.png" alt="" />
-          <span><a href="#" class="blue-btn">SIGN UP FOR TRAINING</a></span>
+          <span class="main-button-magin"><a href="https://www.milestonesys.com/solutions/services/learning-and-performance/" target="_blank" class="blue-btn">SIGN UP FOR TRAINING</a></span>
         </div>
         <div class="main__content">
           <h3>LEARN</h3>
@@ -145,23 +146,23 @@
       </div>
 
       <div class="main__container">
-        <div class="main__img--container">
-          <img src="assets/training.png" alt="" />
-          <span><a href="#" class="blue-btn">SIGN UP FOR TRAINING</a></span>
-        </div>
         <div class="main__content">
           <h3>LEARN</h3>
           <h1>Video tutorials</h1>
           <p>Check out our two MIP SDK related play lists on Milestone Systems YouTube channel. Learn developing MIP SDK Component integrations and Plug-in integrations.</p>
         </div>
+        <div class="main__img--container">
+          <img src="assets/you-tube.png" alt="" />
+          <span class="main-button-magin"><a href="https://www.youtube.com/user/Milestonesys" target="_blank" class="blue-btn">GO TO VIDEOS</a></span>
+        </div>
       </div>
     </div>
-
-    <div class="main" id="community">
+    <!-- Community Section -->
+    <div class="main white-section" id="community">
       <div class="main__container">
         <div class="main__img--container">
           <img src="assets/community.png" alt="" />
-          <span><a href="#" class="blue-btn">JOIN DEVELOPER FORUM</a></span>
+          <span class="main-button-magin"><a href="https://developer.milestonesys.com/s/" target="_blank" class="blue-btn">JOIN DEVELOPER FORUM</a></span>
         </div>
         <div class="main__content">
           <h3>COMMUNITY</h3>
@@ -181,20 +182,29 @@
         <div class="connect">
           <p>Connect with us. We would like to stay in touch.</p>
           <ul class="some">
-            <li><a href="#"></a><i class="fa fa-facebook"></i></li>
-            <li><a href="#"></a><i class="fa fa-instagram"></i></li>
-            <li><a href="#"></a><i class="fa fa-linkedin"></i></li>
-            <li><a href="#"></a><i class="fa fa-twitter"></i></li>
+            <li>
+              <a href="https://www.facebook.com/milestonesys/" target="_blank"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/milestonesystems/" target="_blank"><i class="fa fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/milestone-systems" target="_blank"><i class="fa fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/milestonesys" target="_blank"><i class="fa fa-twitter"></i></a>
+            </li>
           </ul>
         </div>
         <ul class="additional-info">
-          <li><a href="#">Legal</a> |</li>
-          <li><a href="#">Privacy</a> |</li>
-          <li><a href="#">Site Map</a></li>
+          <li><a href="https://www.milestonesys.com/terms-of-use/" target="_blank">Legal</a> |</li>
+          <li><a href="https://www.milestonesys.com/privacy-policy/" target="_blank">Privacy</a> |</li>
+          <li><a href="https://www.milestonesys.com/about-us/jobs-and-careers/" target="_blank">Careers</a></li>
         </ul>
       </div>
     </footer>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script type="module" src="./script.js"></script>
+    <script type="module" src="./signup-form-validation.js"></script>
   </body>
 </html>
